@@ -85,6 +85,7 @@
             /* Neu hinzugefügt für die Zentrierung */
             text-align: center;
         }
+
         .footer {
             display: block;
             font-size: 12px;
@@ -94,6 +95,13 @@
             /* Neu hinzugefügt für die Zentrierung */
             text-align: center;
         }
+
+        .tag-counter {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -101,8 +109,9 @@
 
     <div class="container">
         <div class="headline">
-            Sonauto v3 Tag Explorer mini
+            Sonauto v3 Tag Explorer mini <span class="tag-counter">(<span id="totalTags" >0</span> total tags)</span> 
         </div>
+
         <div class="controls">
             <div class="control-group">
                 <label for="categorySelect">Filter category:</label>
@@ -121,7 +130,8 @@
             </div>
         </div>
 
-        <h3>Available Tags:</h3>
+        <h3>Available Tags: <span class="tag-counter">(<span id="tagCounter" >0</span>)</span></h3>
+
         <ul id="tagList" class="tag-container">
             <!-- Tags werden hier flexibel eingefügt -->
         </ul>
@@ -4135,6 +4145,23 @@
                 option.textContent = category;
                 select.appendChild(option);
             }
+
+            // Neu: Set erstellen, um einzigartige Tags zu sammeln
+            const uniqueTags = new Set();
+
+            for (let category in tagData) {
+                let option = document.createElement("option");
+                option.value = category;
+                option.textContent = category;
+                select.appendChild(option);
+
+                // Neu: Alle Tags dieser Kategorie in das Set werfen
+                tagData[category].forEach(tag => uniqueTags.add(tag));
+            }
+
+            // Neu: Die Gesamtanzahl im HTML anzeigen
+            document.getElementById("totalTags").textContent = uniqueTags.size;
+
             renderTags();
         }
 
@@ -4142,11 +4169,15 @@
             const selectedCategory = document.getElementById("categorySelect").value;
             const sortOrder = document.getElementById("sortSelect").value;
             const list = document.getElementById("tagList");
+            const counter = document.getElementById("tagCounter"); // Neu: Counter-Element holen
 
             list.innerHTML = "";
 
             // Kopie des Arrays ziehen, um das Original-JSON nicht zu verändern
             let tags = [...tagData[selectedCategory]];
+
+            // Neu: Die Anzahl der Tags ermitteln und anzeigen
+            counter.textContent = `Found ${tags.length} tags`;
 
             // Sortierung anwenden
             if (sortOrder === "asc") {
