@@ -4139,12 +4139,6 @@
 
         function init() {
             const select = document.getElementById("categorySelect");
-            for (let category in tagData) {
-                let option = document.createElement("option");
-                option.value = category;
-                option.textContent = category;
-                select.appendChild(option);
-            }
 
             // Neu: Set erstellen, um einzigartige Tags zu sammeln
             const uniqueTags = new Set();
