@@ -105,23 +105,23 @@
         </div>
         <div class="controls">
             <div class="control-group">
-                <label for="categorySelect">Kategorie filtern:</label>
+                <label for="categorySelect">Filter category:</label>
                 <select id="categorySelect" onchange="renderTags()">
                     <!-- Wird dynamisch befüllt -->
                 </select>
             </div>
 
             <div class="control-group">
-                <label for="sortSelect">Sortierung:</label>
+                <label for="sortSelect">Sorting:</label>
                 <select id="sortSelect" onchange="renderTags()">
-                    <option value="original">Originale Reihenfolge</option>
-                    <option value="asc">Alphabetisch (A - Z)</option>
-                    <option value="desc">Alphabetisch (Z - A)</option>
+                    <option value="original">Original order</option>
+                    <option value="asc">Alphabetical (A - Z)</option>
+                    <option value="desc">Alphabetical (Z - A)</option>
                 </select>
             </div>
         </div>
 
-        <h3>Verfügbare Tags:</h3>
+        <h3>Available Tags:</h3>
         <ul id="tagList" class="tag-container">
             <!-- Tags werden hier flexibel eingefügt -->
         </ul>
@@ -132,7 +132,7 @@
 
     <script>
         const tagData = {
-            "Jahrzehnte & Ären": [
+            "Decades & Eras": [
                 "1980s",
                 "1990s",
                 "Early 1990s",
@@ -200,7 +200,7 @@
                 "early rock and roll",
                 "golden era"
             ],
-            "Haupt-Genres": [
+            "Main-Genres": [
                 "Rock",
                 "Alternative Rock",
                 "Hard Rock",
@@ -226,7 +226,7 @@
                 "House",
                 "Dance"
             ],
-            "Traditionelle & Regionale Genres": [
+            "Traditional & Regional Genres": [
                 "Blues",
                 "Jazz",
                 "Folk",
@@ -237,7 +237,7 @@
                 "Reggae",
                 "World"
             ],
-            "Stile, Stimmung & Verwendungszweck": [
+            "Styles, Mood & Intended use": [
                 "Funk",
                 "Punk",
                 "New Age",
@@ -251,7 +251,7 @@
                 "Original Soundtrack",
                 "Children"
             ],
-            "Instrumente & Musikalität": [
+            "Instruments & Musicality": [
                 "Guitar",
                 "Piano",
                 "Drums",
@@ -259,7 +259,7 @@
                 "Instrumental",
                 "Diction"
             ],
-            "Besetzung & Qualität": [
+            "Cast & Quality": [
                 "Male Vocalist",
                 "Female Vocalist",
                 "Good Artist",
@@ -1566,7 +1566,7 @@
                 "blues/r&b",
                 "classic motown"
             ],
-            "Folk, Country & Geistliche Musik": [
+            "Folk, Country & Sacred Music": [
                 "contemporary folk",
                 "americana",
                 "indie folk",
@@ -1762,7 +1762,7 @@
                 "trás-os-montes folk",
                 "noël"
             ],
-            "Klassik & Avantgarde": [
+            "Classical & Avant-garde": [
                 "modern classical",
                 "baroque",
                 "chamber",
@@ -1894,7 +1894,7 @@
                 "integral serialism",
                 "modal music"
             ],
-            "Stimmung & Atmosphäre": [
+            "Mood & Atmosphere": [
                 "atmospheric",
                 "dark",
                 "heavy",
@@ -1920,7 +1920,7 @@
                 "pastoral",
                 "cold"
             ],
-            "Emotionen & Vibe": [
+            "Emotions & Vibe": [
                 "energetic",
                 "rhythmic",
                 "uplifting",
@@ -1974,7 +1974,7 @@
                 "apathetic",
                 "suicide"
             ],
-            "Instrumente & Gesang": [
+            "Instruments & Singing": [
                 "vocal",
                 "backing vocals",
                 "acoustic",
@@ -2054,7 +2054,7 @@
                 "electronic instruments",
                 "turntable"
             ],
-            "Sprachen, Regionen & Kultur": [
+            "Languages, Regions & Culture": [
                 "in english",
                 "deutschland",
                 "german",
@@ -3167,7 +3167,7 @@
                 "batuque",
                 "rasin"
             ],
-            "Medien, Kontext & Sonstiges": [
+            "Media, Context & Other": [
                 "stage & screen",
                 "score",
                 "video game",
@@ -3744,7 +3744,7 @@
                 "romance",
                 "bend"
             ],
-            "Stimmung & Industrie": [
+            "Mood & Industry": [
                 "electro-industrial",
                 "industrial rock",
                 "post-industrial",
@@ -3770,7 +3770,7 @@
                 "soundscape",
                 "tape"
             ],
-            "Atmosphäre & Dichte": [
+            "Atmosphere & Density": [
                 "suspenseful",
                 "meditative",
                 "space",
@@ -3801,7 +3801,7 @@
                 "light",
                 "big"
             ],
-            "Stimmung, Industrie & Sound Art": [
+            "Mood, Industry & Sound Art": [
                 "death industrial",
                 "martial industrial",
                 "martial",
@@ -3816,7 +3816,7 @@
                 "eai",
                 "digital fusion"
             ],
-            "Atmosphäre, Vibe & Struktur": [
+            "Atmosphere, Vibe & Structure": [
                 "dream",
                 "funereal",
                 "natural",
@@ -3894,7 +3894,7 @@
                 "feedback",
                 "weirdcore"
             ],
-            "Instrumente": [
+            "Instruments": [
                 "12 string guitar",
                 "resonator guitar",
                 "wurlitzer electric piano",
